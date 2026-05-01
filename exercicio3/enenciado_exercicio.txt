@@ -1,0 +1,65 @@
+--OBI 2005 nível 1 - 
+
+DESCRICAO:
+Minhocas sao muito importantes para a agricultura e como insumo para producao de racao animal.
+A Organizacao para Bioengenharia de Minhocas (OBM) e uma entidade nao governamental que
+promove o aumento da producao, utilizacao e exportacao de minhocas.
+
+Uma das atividades promovidas pela OBM e a manutencao de uma fazenda experimental para
+pesquisa de novas tecnologias de criacao de minhocas. Na fazenda, a area destinada as
+pesquisas e de formato retangular, dividida em celulas quadrangulares de mesmo tamanho.
+Os pesquisadores da OBM mantem um acompanhamento constante do desenvolvimento das
+minhocas em cada celula, e tem uma estimativa extremamente precisa da produtividade
+em cada uma das celulas.
+
+A figura abaixo mostra um mapa da fazenda, com a produtividade estimada de cada celula:
+81  28 240  10
+40  10 100 240
+20 180 110  35
+
+Um pesquisador da OBM inventou uma maquina colhedeira. A maquina tem a largura de uma celula
+e colhe todas as minhocas da celula por onde passa. Restricao: a maquina nao faz curvas,
+movimentando-se apenas em linha reta (horizontal ou vertical).
+
+TAREFA:
+Escreva um programa que, fornecido o mapa do campo de minhocas, calcule o numero esperado
+total de minhocas a serem colhidas pela maquina em uma unica passada (linha ou coluna cuja
+soma das produtividades seja a maior possivel).
+
+ENTRADA:
+- A primeira linha contem dois inteiros N e M (1 <= N, M <= 100), representando o numero
+  de linhas e colunas do campo.
+- As N linhas seguintes contem M inteiros cada, representando a produtividade de cada celula.
+
+SAIDA:
+- Uma unica linha contendo um inteiro: o numero maximo de minhocas a serem colhidas.
+
+RESTRICOES:
+- 1 <= N <= 100
+- 1 <= M <= 100
+- 0 <= Produtividade de uma celula <= 500
+- 0 <= Produtividade de uma linha ou coluna <= 50000
+
+---------------------------------------------------------
+EXEMPLOS:
+
+Exemplo 1:
+Entrada:
+3 4
+81 28 240 10
+40 10 100 240
+20 180 110 35
+
+Saida:
+450
+
+Exemplo 2:
+Entrada:
+4 1
+100
+110
+0
+100
+
+Saida:
+310
