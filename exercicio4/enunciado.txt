@@ -1,0 +1,1 @@
+O Problema: Análise de Dados de um Carrinho em um TrilhoUm estudante realiza um experimento onde um carrinho desliza por um trilho com aceleração constante. Ele registra a posição $s$ (em metros) a cada segundo, começando de $t = 0$.Dados coletados:Tempo: $[0, 1, 2, 3, 4, 5]$ sEspaço: $[2, 5, 10, 17, 26, 37]$ m
