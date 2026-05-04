@@ -1,10 +1,10 @@
-# Exercicios_matriz-Cpp
+# Exercicios matriz/arrays - C++
 Vários desafios/ questões envolvendo matrizes respondidas com explicação e testes 
 <ul>
   <li><a href="#exercicio1"> Exercicio 1 - Campo Minado</a></li>
   <li><a href="#exercicio2"> Exercicio 2 - Corrida</a></li>
   <li><a href="#exercicio3"> Exercicio 3 - Maquina de minhocas</a></li>
-
+  <li><a href="#exercicio4"> Exercicio 4 - Cálculo de aceleração e velocidade</a></li>
 </ul>
 
 # Exercicio 1 📁
@@ -133,3 +133,45 @@ int main()
 }
 ```
 
+# Exercicio 4 📁
+<a id="exercicio4" href="https://github.com/LeticiaHartstein/Exercicios_matriz-Cpp/blob/main/exercicio4/enunciado.txt"> Enunciado </a>
+<h3>Resolução: </h3>
+<a href="https://github.com/LeticiaHartstein/Exercicios_matriz-Cpp/blob/main/exercicio4/resolucao.cpp">Código🔗</a>
+
+```cpp
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main()
+{
+    //t = tempo, a = aceleração, e = espaço
+    int t = 0, a = 0, e = 0;
+    //armazenar diferentes tempos, espaço e as diferentes velocidades entre dois pontos
+    int tempo[4] = {0}, espaco[4]={0}, velocidade[3] ={0};
+
+    
+    cout << "\n Calculo de aceleração e tempo \n";
+    
+    //loop para adicionar informações aos arrays espaco  e velocidade
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "\n Insira o espaco: ";
+        cin >> e;
+        espaco[i] = e;
+        cout << "  Insira o tempo: ";
+        cin >> e;
+        tempo[i] = e;
+    }
+    //calculando a velocidade entre dois pontos
+    for (int i = 0; i < 3; i++)
+    {
+            velocidade[i] = (espaco[i+1] - espaco[i])/(tempo[i+1] - tempo[i]);
+            cout << "\n" << espaco[i] <<" "<< espaco[i+1] << "=" << velocidade[i] << "M/s"; 
+    }
+    //calculando a aceleração entre a 2 velocidade armazenada e a 1 velocidade armazenada
+    a = (velocidade[1] - velocidade[0])/( tempo[1] - tempo[0]);
+
+    cout << "\n Aceleracao: " << a << "m/s^2";
+}
+```
